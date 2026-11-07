@@ -594,6 +594,74 @@
                 </div>
                 <button onclick="deductPenalty('虚假报点(作业敷衍/抄袭)', 100)" class="px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition">执行扣分 (-100)</button>
             </div>
+
+            <!-- ===== 新增：日常作息与专注度扣分项 ===== -->
+            <div class="bg-slate-900/60 border border-rose-500/20 rounded-lg px-3 py-2 text-[11px] text-rose-300/90 flex items-center gap-1.5">
+                <i class="fa-solid fa-bed"></i>
+                <span>日常作息与专注度专项扣分（每日可多次执行）</span>
+            </div>
+
+            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                        <span class="text-sm font-bold text-rose-300">1. 战场准备失败</span>
+                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-50 币</span>
+                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
+                            <i class="fa-solid fa-clock mr-0.5"></i>20:00 前
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">未在 20:00 前完成洗澡，影响后续特训开场，每次扣除 50 哈夫币。</p>
+                </div>
+                <button onclick="deductPenalty('战场准备失败(20:00前未洗完澡)', 50)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
+                    <i class="fa-solid fa-shower"></i><span>执行扣分 (-50)</span>
+                </button>
+            </div>
+
+            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                        <span class="text-sm font-bold text-rose-300">2. 特训开小差</span>
+                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-100 币</span>
+                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
+                            <i class="fa-solid fa-calendar-week mr-0.5"></i>周一至周五 20:00-21:30
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">周一至周五 20:00-21:30 为专注学习时段（仅可做与学习相关的活动），未专注学习每次扣除 100 哈夫币。</p>
+                </div>
+                <button onclick="deductPenalty('特训开小差(专注时段未专注学习)', 100)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
+                    <i class="fa-solid fa-mobile-screen"></i><span>执行扣分 (-100)</span>
+                </button>
+            </div>
+
+            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                        <span class="text-sm font-bold text-rose-300">3. 撤离休整失败</span>
+                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-50 币</span>
+                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
+                            <i class="fa-solid fa-moon mr-0.5"></i>22:00 / 22:10
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">22:00 仍未上床睡觉，或 22:10 后仍在床上说话，每次扣除 50 哈夫币。</p>
+                </div>
+                <button onclick="deductPenalty('撤离休整失败(22:00未睡/22:10后讲话)', 50)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
+                    <i class="fa-solid fa-bed"></i><span>执行扣分 (-50)</span>
+                </button>
+            </div>
+
+            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                        <span class="text-sm font-bold text-rose-300">4. 未遵从教官指示</span>
+                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-100 币</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">每日学习任务未按教官（家长）要求完成，每次扣除 100 哈夫币。</p>
+                </div>
+                <button onclick="deductPenalty('未遵从教官指示(未按要求完成学习任务)', 100)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
+                    <i class="fa-solid fa-bullhorn"></i><span>执行扣分 (-100)</span>
+                </button>
+            </div>
+            <!-- ===== 新增结束 ===== -->
         </div>
 
         <!-- TAB 5: 勤务日志 -->
@@ -731,6 +799,9 @@
                     <h2 class="font-bold text-sm bg-slate-200 p-1.5 border-l-4 border-slate-900 mb-2">三、 违规警报与双签确认</h2>
                     <p class="text-slate-700 leading-relaxed">
                         <strong>违规惩罚：</strong>1-3分钟微小超时(-50币)；3-10分钟中度超时(-150币+次日禁游1天)；10分钟以上严重超时/偷玩(-300币+清空当周游戏时间)；作业敷衍抄袭(-100币)。
+                    </p>
+                    <p class="text-slate-700 leading-relaxed mt-1">
+                        <strong>日常作息扣分：</strong>20:00前未洗完澡(-50币)；周一至周五 20:00-21:30 专注时段开小差(-100币)；22:00未上床/22:10后床上讲话(-50币)；未按教官要求完成学习任务(-100币)。
                     </p>
                     <div class="grid grid-cols-2 gap-8 pt-8 text-xs">
                         <div class="border-t border-slate-400 pt-2">
