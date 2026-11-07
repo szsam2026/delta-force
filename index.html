@@ -594,74 +594,6 @@
                 </div>
                 <button onclick="deductPenalty('虚假报点(作业敷衍/抄袭)', 100)" class="px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition">执行扣分 (-100)</button>
             </div>
-
-            <!-- ===== 新增：日常作息与专注度扣分项 ===== -->
-            <div class="bg-slate-900/60 border border-rose-500/20 rounded-lg px-3 py-2 text-[11px] text-rose-300/90 flex items-center gap-1.5">
-                <i class="fa-solid fa-bed"></i>
-                <span>日常作息与专注度专项扣分（每日可多次执行）</span>
-            </div>
-
-            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
-                        <span class="text-sm font-bold text-rose-300">1. 战场准备失败</span>
-                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-50 币</span>
-                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
-                            <i class="fa-solid fa-clock mr-0.5"></i>20:00 前
-                        </span>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-1">未在 20:00 前完成洗澡，影响后续特训开场，每次扣除 50 哈夫币。</p>
-                </div>
-                <button onclick="deductPenalty('战场准备失败(20:00前未洗完澡)', 50)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
-                    <i class="fa-solid fa-shower"></i><span>执行扣分 (-50)</span>
-                </button>
-            </div>
-
-            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
-                        <span class="text-sm font-bold text-rose-300">2. 特训开小差</span>
-                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-100 币</span>
-                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
-                            <i class="fa-solid fa-calendar-week mr-0.5"></i>周一至周五 20:00-21:30
-                        </span>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-1">周一至周五 20:00-21:30 为专注学习时段（仅可做与学习相关的活动），未专注学习每次扣除 100 哈夫币。</p>
-                </div>
-                <button onclick="deductPenalty('特训开小差(专注时段未专注学习)', 100)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
-                    <i class="fa-solid fa-mobile-screen"></i><span>执行扣分 (-100)</span>
-                </button>
-            </div>
-
-            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
-                        <span class="text-sm font-bold text-rose-300">3. 撤离休整失败</span>
-                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-50 币</span>
-                        <span class="text-[10px] px-1.5 py-0.5 bg-slate-700/60 text-slate-300 border border-slate-600/60 rounded-full">
-                            <i class="fa-solid fa-moon mr-0.5"></i>22:00 / 22:10
-                        </span>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-1">22:00 仍未上床睡觉，或 22:10 后仍在床上说话，每次扣除 50 哈夫币。</p>
-                </div>
-                <button onclick="deductPenalty('撤离休整失败(22:00未睡/22:10后讲话)', 50)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
-                    <i class="fa-solid fa-bed"></i><span>执行扣分 (-50)</span>
-                </button>
-            </div>
-
-            <div class="bg-slate-800/60 border border-rose-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
-                        <span class="text-sm font-bold text-rose-300">4. 未遵从教官指示</span>
-                        <span class="text-xs px-2 py-0.5 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full font-mono">-100 币</span>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-1">每日学习任务未按教官（家长）要求完成，每次扣除 100 哈夫币。</p>
-                </div>
-                <button onclick="deductPenalty('未遵从教官指示(未按要求完成学习任务)', 100)" class="w-full sm:w-auto px-4 py-2 bg-rose-700 hover:bg-rose-600 text-white font-bold text-xs rounded-lg transition flex items-center justify-center space-x-1">
-                    <i class="fa-solid fa-bullhorn"></i><span>执行扣分 (-100)</span>
-                </button>
-            </div>
-            <!-- ===== 新增结束 ===== -->
         </div>
 
         <!-- TAB 5: 勤务日志 -->
@@ -799,9 +731,6 @@
                     <h2 class="font-bold text-sm bg-slate-200 p-1.5 border-l-4 border-slate-900 mb-2">三、 违规警报与双签确认</h2>
                     <p class="text-slate-700 leading-relaxed">
                         <strong>违规惩罚：</strong>1-3分钟微小超时(-50币)；3-10分钟中度超时(-150币+次日禁游1天)；10分钟以上严重超时/偷玩(-300币+清空当周游戏时间)；作业敷衍抄袭(-100币)。
-                    </p>
-                    <p class="text-slate-700 leading-relaxed mt-1">
-                        <strong>日常作息扣分：</strong>20:00前未洗完澡(-50币)；周一至周五 20:00-21:30 专注时段开小差(-100币)；22:00未上床/22:10后床上讲话(-50币)；未按教官要求完成学习任务(-100币)。
                     </p>
                     <div class="grid grid-cols-2 gap-8 pt-8 text-xs">
                         <div class="border-t border-slate-400 pt-2">
@@ -2165,4 +2094,1120 @@
         }
 
         function toggleNewUserMultiplier() {
-            const tier = document
+            const tier = document.getElementById('newUserTierSelect').value;
+            const input = document.getElementById('newUserMultiplierInput');
+            const isPrem = tier === TIER_PREMIUM;
+            input.disabled = !isPrem;
+            if (isPrem && !input.value) input.value = DEFAULT_MULTIPLIER;
+        }
+
+        function createNewOperator() {
+            const op = document.getElementById('newUserNameInput').value.trim();
+            const cmd = document.getElementById('newUserCmdInput').value.trim() || '战术指挥官';
+            const selectAvatar = document.getElementById('newUserAvatarSelect').value;
+            const tier = document.getElementById('newUserTierSelect').value;
+
+            if (!op) {
+                showToast("请输入新干员代号");
+                return;
+            }
+
+            const multiplier = (tier === TIER_PREMIUM)
+                ? clampMultiplier(document.getElementById('newUserMultiplierInput').value)
+                : 1;
+
+            const avatarToUse = tempNewUserAvatar || selectAvatar || 'fa-user-ninja';
+            const newId = 'user_' + Date.now();
+
+            const newUser = {
+                id: newId,
+                operatorName: op,
+                commanderName: cmd,
+                avatar: avatarToUse,
+                tier: tier,
+                multiplier: multiplier,
+                coins: 100,
+                history: [
+                    { id: genLogId(), title: '新干员入职契约礼包', amount: 100, type: 'earn', date: getTodayStr() }
+                ],
+                claimedTasks: {},
+                claimedCounts: {}
+            };
+
+            appData.users.push(newUser);
+            appData.activeUserId = newId;
+
+            document.getElementById('newUserNameInput').value = '';
+            document.getElementById('newUserCmdInput').value = '';
+            document.getElementById('newUserTierSelect').value = TIER_BASIC;
+            document.getElementById('newUserMultiplierInput').value = DEFAULT_MULTIPLIER;
+            document.getElementById('newUserMultiplierInput').disabled = true;
+            tempNewUserAvatar = '';
+
+            saveAppData();
+            renderManageUsersModal();
+            showToast(`新干员【${op}】已入职${tier === TIER_PREMIUM ? `（高级 ×${multiplier}）` : ''}`);
+        }
+
+        async function deleteOperator(userId) {
+            if (appData.users.length <= 1) {
+                showToast("无法删除！系统至少需保留一名特勤干员");
+                return;
+            }
+
+            const userToDelete = appData.users.find(u => u.id === userId);
+            const confirmed = await openConfirmDialog("警告：删除干员", `确定要注销干员【${userToDelete.operatorName}】的完整战术档案吗？此操作无法撤销！`);
+
+            if (confirmed) {
+                appData.users = appData.users.filter(u => u.id !== userId);
+                if (appData.activeUserId === userId) {
+                    appData.activeUserId = appData.users[0].id;
+                }
+                saveAppData();
+                renderManageUsersModal();
+                showToast("干员档案已解聘注销");
+            }
+        }
+
+        function renderManageUsersModal() {
+            const container = document.getElementById('usersManageList');
+            if (!container) return;
+
+            container.innerHTML = appData.users.map(u => {
+                const isActive = u.id === appData.activeUserId;
+                return `
+                    <div class="bg-slate-950/80 border ${isActive ? 'border-amber-500' : 'border-slate-800'} p-2.5 rounded-lg flex items-center justify-between text-xs gap-2">
+                        <div class="flex items-center space-x-2.5 min-w-0">
+                            <div class="w-8 h-8 rounded-lg overflow-hidden border border-slate-700 flex-shrink-0 flex items-center justify-center bg-slate-800">
+                                ${renderAvatarElement(u.avatar, "w-full h-full text-xs")}
+                            </div>
+                            <div class="min-w-0">
+                                <div class="font-bold text-slate-200 flex items-center gap-1.5 flex-wrap">
+                                    <span>${escapeHtml(u.operatorName)}</span>
+                                    ${isActive ? '<span class="text-[9px] px-1 bg-amber-500 text-slate-950 font-bold rounded">当前</span>' : ''}
+                                    ${tierBadgeHtml(u, 'xs')}
+                                </div>
+                                <div class="text-[10px] text-slate-400">指挥官: ${escapeHtml(u.commanderName)} • 储备: ${u.coins}币</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-1 flex-shrink-0">
+                            ${!isActive ? `<button onclick="switchActiveUser('${u.id}')" class="px-2 py-1 bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 rounded text-[11px]">切换</button>` : ''}
+                            <button onclick="deleteOperator('${u.id}')" class="p-1.5 text-slate-500 hover:text-rose-400 transition" title="删除干员">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderLeaderboardModal() {
+            const container = document.getElementById('leaderboardList');
+            if (!container) return;
+
+            const sortedUsers = [...appData.users].sort((a, b) => b.coins - a.coins);
+
+            container.innerHTML = sortedUsers.map((u, index) => {
+                let rankBadgeHtml = '';
+                if (index === 0) {
+                    rankBadgeHtml = `<div class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center shadow-lg">1</div>`;
+                } else if (index === 1) {
+                    rankBadgeHtml = `<div class="w-6 h-6 rounded-full bg-slate-300 text-slate-950 font-black text-xs flex items-center justify-center">2</div>`;
+                } else if (index === 2) {
+                    rankBadgeHtml = `<div class="w-6 h-6 rounded-full bg-amber-700 text-slate-100 font-black text-xs flex items-center justify-center">3</div>`;
+                } else {
+                    rankBadgeHtml = `<div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center">${index + 1}</div>`;
+                }
+
+                return `
+                    <div class="bg-slate-950/80 border border-slate-800 p-3 rounded-xl flex items-center justify-between text-xs">
+                        <div class="flex items-center space-x-3 min-w-0">
+                            ${rankBadgeHtml}
+                            <div class="w-8 h-8 rounded-lg overflow-hidden border border-slate-700 flex-shrink-0 flex items-center justify-center bg-slate-800">
+                                ${renderAvatarElement(u.avatar, "w-full h-full text-xs")}
+                            </div>
+                            <div class="min-w-0">
+                                <div class="font-bold text-slate-200 flex items-center gap-2 flex-wrap">
+                                    <span>${escapeHtml(u.operatorName)}</span>
+                                    ${tierBadgeHtml(u, 'xs')}
+                                </div>
+                                <div class="text-[10px] text-slate-400 mt-0.5">指挥官: ${escapeHtml(u.commanderName)} • 日志 ${u.history.length} 条</div>
+                            </div>
+                        </div>
+
+                        <div class="text-right flex-shrink-0">
+                            <div class="text-base font-black font-tactical text-amber-400 flex items-center justify-end gap-1">
+                                <i class="fa-solid fa-coins text-xs"></i>
+                                <span>${u.coins}</span>
+                            </div>
+                            <div class="text-[9px] text-cyan-400">哈夫币</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        async function confirmResetCurrentUserData() {
+            const activeUser = getActiveUser();
+            const confirmed = await openConfirmDialog("清空干员数据", `确认重置干员【${activeUser.operatorName}】的所有巡逻打卡与哈夫币数据吗？（等级与系数设置保留）`);
+            if (confirmed) {
+                activeUser.coins = 100;
+                activeUser.history = [{ id: genLogId(), title: '战术重置入职礼包', amount: 100, type: 'earn', date: getTodayStr() }];
+                activeUser.claimedTasks = {};
+                activeUser.claimedCounts = {};
+                saveAppData();
+                showToast("数据已重置为初始状态");
+            }
+        }
+
+        /* =========================================================
+           十、数据备份 / 恢复
+           ========================================================= */
+        function openBackupModal() {
+            renderBackupStats();
+            openModal('backupModal');
+        }
+
+        function renderBackupStats() {
+            const totalUsers = appData.users.length;
+            const premiumCount = appData.users.filter(u => isPremium(u)).length;
+            const basicCount = totalUsers - premiumCount;
+            const totalCoins = appData.users.reduce((s, u) => s + (Number(u.coins) || 0), 0);
+            const totalHistory = appData.users.reduce((s, u) => s + ((u.history && u.history.length) || 0), 0);
+            const totalTasks = appData.users.reduce((s, u) => {
+                if (!u.claimedTasks) return s;
+                return s + Object.keys(u.claimedTasks).reduce((acc, date) => acc + Object.keys(u.claimedTasks[date] || {}).length, 0);
+            }, 0);
+
+            const el = document.getElementById('backupStats');
+            if (!el) return;
+            el.innerHTML = `
+                <div class="flex justify-between"><span class="text-slate-400">干员总数</span><span class="text-slate-200 font-bold">${totalUsers} 名</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">基础 / 高级</span><span class="text-slate-200 font-bold"><span class="text-slate-300">${basicCount}</span> / <span class="text-amber-400">${premiumCount}</span></span></div>
+                <div class="flex justify-between"><span class="text-slate-400">哈夫币总量</span><span class="text-amber-400 font-bold">${totalCoins}</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">日志条数</span><span class="text-cyan-400 font-bold">${totalHistory} 条</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">打卡记录</span><span class="text-emerald-400 font-bold">${totalTasks} 条</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">月度结算基准</span><span class="text-purple-400 font-bold">${appData.lastSettleMonth || '未记录'}</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">本地存储状态</span><span class="${storageAvailable ? 'text-emerald-400' : 'text-rose-400'} font-bold">${storageAvailable ? '正常' : '不可用'}</span></div>
+            `;
+        }
+
+        function exportData() {
+            try {
+                const exportPayload = {
+                    _meta: {
+                        app: 'DELTA FORCE 特勤干员积分终端',
+                        version: BACKUP_VERSION,
+                        exportAt: new Date().toISOString(),
+                        userCount: appData.users.length
+                    },
+                    activeUserId: appData.activeUserId,
+                    lastSettleMonth: appData.lastSettleMonth,
+                    lastModified: appData.lastModified,
+                    deviceId: appData.deviceId,
+                    users: appData.users
+                };
+
+                const dataStr = JSON.stringify(exportPayload, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+
+                const now = new Date();
+                const ts = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `delta_force_backup_${ts}.json`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+                showToast(`备份导出成功 · ${appData.users.length} 名干员`);
+            } catch (e) {
+                console.error(e);
+                showToast('导出失败，请重试或更换浏览器');
+            }
+        }
+
+        function handleImportFile(input) {
+            if (!input.files || !input.files[0]) return;
+            const file = input.files[0];
+
+            if (file.size > 10 * 1024 * 1024) {
+                showToast('备份文件过大（上限10MB）');
+                input.value = '';
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = async function (e) {
+                let parsed;
+                try {
+                    parsed = JSON.parse(e.target.result);
+                } catch (err) {
+                    console.error(err);
+                    showToast('文件解析失败，请确认是否为有效的 JSON 备份');
+                    input.value = '';
+                    return;
+                }
+
+                if (!parsed || !Array.isArray(parsed.users) || parsed.users.length === 0) {
+                    showToast('备份文件格式无效：缺少干员数据');
+                    input.value = '';
+                    return;
+                }
+
+                try {
+                    parsed.users.forEach((u, idx) => {
+                        if (!u || typeof u !== 'object') throw new Error(`第 ${idx + 1} 条干员数据不是有效对象`);
+                        if (!u.id) u.id = 'user_' + Date.now() + '_' + idx;
+                        if (!u.operatorName) throw new Error(`第 ${idx + 1} 条干员缺少代号`);
+                        if (!u.commanderName) u.commanderName = '战术指挥官';
+                        if (!u.avatar) u.avatar = 'fa-user-ninja';
+                        if (typeof u.coins !== 'number' || !isFinite(u.coins)) u.coins = 0;
+                        if (!Array.isArray(u.history)) u.history = [];
+                        if (!u.claimedTasks || typeof u.claimedTasks !== 'object') u.claimedTasks = {};
+                        if (!u.claimedCounts || typeof u.claimedCounts !== 'object') u.claimedCounts = {};
+                        normalizeUser(u);
+                    });
+                } catch (err) {
+                    showToast('备份文件数据异常：' + err.message);
+                    input.value = '';
+                    return;
+                }
+
+                const seenIds = new Set();
+                parsed.users.forEach((u, idx) => {
+                    if (seenIds.has(u.id)) {
+                        u.id = u.id + '_' + idx;
+                    }
+                    seenIds.add(u.id);
+                });
+
+                const userCount = parsed.users.length;
+                const totalCoins = parsed.users.reduce((s, u) => s + (Number(u.coins) || 0), 0);
+                const premiumCount = parsed.users.filter(u => isPremium(u)).length;
+                const exportAt = parsed._meta && parsed._meta.exportAt
+                    ? new Date(parsed._meta.exportAt).toLocaleString('zh-CN')
+                    : '未知时间';
+
+                const confirmed = await openConfirmDialog(
+                    '导入备份数据',
+                    `备份时间：${exportAt}\n包含 ${userCount} 名干员（高级 ${premiumCount} 名），共 ${totalCoins} 哈夫币。\n\n⚠ 导入将【覆盖】当前全部数据，此操作无法撤销。\n是否确认继续？`
+                );
+
+                if (confirmed) {
+                    const prevActiveId = appData.activeUserId;
+                    const importedSettleMonth = parsed.lastSettleMonth
+                        && /^\d{4}-\d{2}$/.test(String(parsed.lastSettleMonth))
+                        ? parsed.lastSettleMonth
+                        : getCurrentMonthStr();
+
+                    appData = {
+                        activeUserId: parsed.activeUserId || prevActiveId,
+                        lastSettleMonth: importedSettleMonth,
+                        lastModified: Date.now(),
+                        deviceId: getDeviceId(),
+                        users: parsed.users
+                    };
+
+                    if (!appData.users.some(u => u.id === appData.activeUserId)) {
+                        appData.activeUserId = appData.users[0].id;
+                    }
+
+                    saveAppData();
+                    showToast(`数据导入成功 · ${userCount} 名干员已恢复`);
+                    closeModal('backupModal');
+                }
+
+                input.value = '';
+            };
+
+            reader.onerror = function () {
+                showToast('文件读取失败，请重试');
+                input.value = '';
+            };
+
+            reader.readAsText(file);
+        }
+
+        /* =========================================================
+           ★★★ 十一、云端同步核心（JSONBin）★★★
+           ========================================================= */
+
+        /** 是否已配置云端同步 */
+        function isCloudConfigured() {
+            const key = String(JSONBIN_CONFIG.API_KEY || '').trim();
+            const bin = String(JSONBIN_CONFIG.BIN_ID || '').trim();
+            return key.length > 10 && bin.length > 5;
+        }
+
+        /** 本地是否有未同步的改动 */
+        function hasUnsyncedChanges() {
+            const localTs = Number(appData && appData.lastModified) || 0;
+            const synced = Number(syncMeta.lastSyncedAt) || 0;
+            return localTs > synced;
+        }
+
+        /** 安排一次防抖自动上传 */
+        function scheduleAutoSync() {
+            if (!isCloudConfigured()) return;
+            if (!JSONBIN_CONFIG.AUTO_SYNC) return;
+            if (autoSyncTimer) clearTimeout(autoSyncTimer);
+            autoSyncTimer = setTimeout(function () {
+                autoSyncTimer = null;
+                syncWithCloud({ manual: false });
+            }, JSONBIN_CONFIG.PUSH_DEBOUNCE || 2500);
+        }
+
+        /** 读取云端记录；返回 null 表示云端无有效数据 */
+        async function fetchCloudRecord() {
+            const url = `${JSONBIN_CONFIG.BASE_URL}/${encodeURIComponent(JSONBIN_CONFIG.BIN_ID)}/latest`;
+            const res = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'X-Master-Key': JSONBIN_CONFIG.API_KEY,
+                    'X-Bin-Meta': 'false',
+                    'Cache-Control': 'no-cache'
+                }
+            });
+
+            if (res.status === 401 || res.status === 403) {
+                const err = new Error('AUTH_FAILED');
+                err.code = 'AUTH';
+                throw err;
+            }
+            if (res.status === 404) {
+                const err = new Error('BIN_NOT_FOUND');
+                err.code = 'NOTFOUND';
+                throw err;
+            }
+            if (!res.ok) {
+                const err = new Error('HTTP_' + res.status);
+                err.code = 'HTTP';
+                throw err;
+            }
+
+            const raw = await res.json();
+            const record = (raw && raw.record && typeof raw.record === 'object' && !raw.metadata) ? raw.record : raw;
+
+            if (record && Array.isArray(record.users) && record.users.length > 0) {
+                return record;
+            }
+            return null;
+        }
+
+        /** 上传本地数据到云端 */
+        async function pushToCloud() {
+            const ts = Date.now();
+            appData.lastModified = ts;
+            appData.deviceId = getDeviceId();
+
+            const url = `${JSONBIN_CONFIG.BASE_URL}/${encodeURIComponent(JSONBIN_CONFIG.BIN_ID)}`;
+            const res = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Master-Key': JSONBIN_CONFIG.API_KEY,
+                    'X-Bin-Versioning': 'false'
+                },
+                body: JSON.stringify(appData)
+            });
+
+            if (res.status === 401 || res.status === 403) {
+                const err = new Error('AUTH_FAILED');
+                err.code = 'AUTH';
+                throw err;
+            }
+            if (!res.ok) {
+                const err = new Error('HTTP_' + res.status);
+                err.code = 'HTTP';
+                throw err;
+            }
+
+            syncMeta.lastSyncedAt = ts;
+            saveSyncMeta();
+            persistData();
+            return ts;
+        }
+
+        /** 把云端记录应用到本地 */
+        function applyCloudRecord(record) {
+            const users = record.users.map(function (u, idx) {
+                if (!u || typeof u !== 'object') u = {};
+                if (!u.id) u.id = 'user_' + Date.now() + '_' + idx;
+                return normalizeUser(u);
+            });
+
+            const cloudTs = Number(record.lastModified) || Date.now();
+
+            appData = {
+                activeUserId: record.activeUserId || users[0].id,
+                lastSettleMonth: record.lastSettleMonth || getCurrentMonthStr(),
+                lastModified: cloudTs,
+                deviceId: record.deviceId || '',
+                users: users
+            };
+
+            if (!appData.users.some(function (u) { return u.id === appData.activeUserId; })) {
+                appData.activeUserId = appData.users[0].id;
+            }
+
+            syncMeta.lastSyncedAt = cloudTs;
+            saveSyncMeta();
+
+            persistData();
+
+            /* 云端数据可能跨月，重新做一次月度结算检查 */
+            const settlement = settleMonthlyCoins();
+            if (settlement) {
+                appData.lastModified = Date.now();
+                persistData();
+            }
+
+            renderUI();
+
+            if (settlement) {
+                const burnedTotal = settlement.results.reduce(function (s, r) { return s + r.burned; }, 0);
+                if (burnedTotal > 0) {
+                    showToast(`月度清算(${settlement.settledMonth})：剩余积分已减半，共回收 ${burnedTotal} 币`);
+                }
+            }
+        }
+
+        /**
+         * 核心同步函数：比对本地 / 云端时间戳，较新者胜出，避免旧数据覆盖新数据。
+         * @param {Object} options
+         *   - manual: 是否用户手动触发（影响提示方式）
+         *   - strategy: 'auto' | 'push' | 'pull'
+         */
+        async function syncWithCloud(options) {
+            const opts = options || {};
+            const manual = !!opts.manual;
+            const strategy = opts.strategy || 'auto';
+
+            if (!isCloudConfigured()) {
+                setSyncStatus('unconfigured');
+                if (manual) openModal('syncSettingsModal');
+                return { ok: false, reason: 'unconfigured' };
+            }
+
+            if (syncInProgress) {
+                if (manual) showToast('同步正在进行中，请稍候…');
+                return { ok: false, reason: 'busy' };
+            }
+
+            if (!navigator.onLine) {
+                setSyncStatus('offline');
+                if (manual) showToast('当前无网络连接，无法与云端同步');
+                return { ok: false, reason: 'offline' };
+            }
+
+            syncInProgress = true;
+            setSyncStatus('syncing');
+
+            try {
+                /* ---------- 1. 拉取云端 ---------- */
+                let cloudRecord = null;
+                try {
+                    cloudRecord = await fetchCloudRecord();
+                } catch (e) {
+                    if (e.code === 'AUTH') {
+                        setSyncStatus('error', 'API Key 无效');
+                        if (manual) showToast('JSONBin API Key 无效或已过期，请检查配置');
+                        syncInProgress = false;
+                        return { ok: false, reason: 'auth' };
+                    }
+                    if (e.code === 'NOTFOUND') {
+                        setSyncStatus('error', 'Bin ID 不存在');
+                        if (manual) showToast('JSONBin Bin ID 不存在，请检查配置');
+                        syncInProgress = false;
+                        return { ok: false, reason: 'notfound' };
+                    }
+                    throw e;
+                }
+
+                /* ---------- 2. 强制策略 ---------- */
+                if (strategy === 'push') {
+                    await pushToCloud();
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    showToast('已强制上传本地数据到云端');
+                    syncInProgress = false;
+                    return { ok: true, action: 'push-forced' };
+                }
+
+                if (strategy === 'pull') {
+                    if (!cloudRecord) {
+                        showToast('云端暂无数据，无法下载');
+                        setSyncStatus('synced');
+                        syncInProgress = false;
+                        return { ok: false, reason: 'empty-cloud' };
+                    }
+                    applyCloudRecord(cloudRecord);
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    showToast('已强制从云端下载最新数据');
+                    syncInProgress = false;
+                    return { ok: true, action: 'pull-forced' };
+                }
+
+                /* ---------- 3. 智能比对 ---------- */
+                const localTs = Number(appData.lastModified) || 0;
+                const cloudTs = cloudRecord ? (Number(cloudRecord.lastModified) || 0) : 0;
+                const lastSynced = Number(syncMeta.lastSyncedAt) || 0;
+
+                /* 3.1 云端为空 → 上传本地 */
+                if (!cloudRecord) {
+                    await pushToCloud();
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    if (manual) showToast('云端暂无数据，已上传本地档案');
+                    syncInProgress = false;
+                    return { ok: true, action: 'push-init' };
+                }
+
+                /* 3.2 全新设备（本地无历史数据）→ 无条件采用云端，防止默认数据覆盖云端 */
+                if (lastSynced === 0 && bootIsPristineLocal) {
+                    applyCloudRecord(cloudRecord);
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    showToast('检测到全新设备，已从云端恢复最新档案');
+                    syncInProgress = false;
+                    return { ok: true, action: 'pull-init' };
+                }
+
+                const localDirty = localTs > lastSynced;
+                const cloudDirty = cloudTs > lastSynced;
+
+                /* 3.3 两边都无改动 → 已一致 */
+                if (!localDirty && !cloudDirty) {
+                    setSyncStatus('synced');
+                    if (manual) showToast('本地与云端数据一致，无需同步');
+                    syncInProgress = false;
+                    return { ok: true, action: 'none' };
+                }
+
+                /* 3.4 仅本地有改动 → 上传 */
+                if (localDirty && !cloudDirty) {
+                    await pushToCloud();
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    if (manual) showToast('本地数据已同步至云端');
+                    syncInProgress = false;
+                    return { ok: true, action: 'push' };
+                }
+
+                /* 3.5 仅云端有改动 → 下载 */
+                if (!localDirty && cloudDirty) {
+                    applyCloudRecord(cloudRecord);
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    if (manual) showToast('已从云端拉取最新数据');
+                    syncInProgress = false;
+                    return { ok: true, action: 'pull' };
+                }
+
+                /* 3.6 双方都有改动 → 冲突：时间戳较新者胜出 */
+                if (cloudTs > localTs) {
+                    applyCloudRecord(cloudRecord);
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    showToast('检测到数据冲突：云端更新，已采用云端版本');
+                    syncInProgress = false;
+                    return { ok: true, action: 'pull-conflict' };
+                } else {
+                    await pushToCloud();
+                    bootIsPristineLocal = false;
+                    setSyncStatus('synced');
+                    showToast('检测到数据冲突：本地更新，已覆盖云端');
+                    syncInProgress = false;
+                    return { ok: true, action: 'push-conflict' };
+                }
+
+            } catch (e) {
+                console.error('云同步失败', e);
+                setSyncStatus('error', e.message || '未知错误');
+                if (manual) showToast('同步失败：' + (e.message || '网络异常'));
+                syncInProgress = false;
+                return { ok: false, reason: e.message };
+            }
+        }
+
+        /* ---------- 同步状态 UI ---------- */
+
+        function setSyncStatus(status, detail) {
+            currentSyncStatus = status;
+            updateSyncButtonUI();
+
+            /* 同步设置弹窗若打开，实时刷新 */
+            const modal = document.getElementById('syncSettingsModal');
+            if (modal && !modal.classList.contains('hidden')) {
+                renderSyncSettingsModal();
+            }
+        }
+
+        function updateSyncButtonUI() {
+            const btn = document.getElementById('cloudSyncBtn');
+            const icon = document.getElementById('cloudSyncIcon');
+            const text = document.getElementById('cloudSyncText');
+            if (!btn || !icon || !text) return;
+
+            const base = 'px-3 py-1.5 border rounded-md flex items-center space-x-1.5 transition text-xs';
+
+            switch (currentSyncStatus) {
+                case 'unconfigured':
+                    btn.className = base + ' bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-500';
+                    icon.className = 'fa-solid fa-cloud-slash';
+                    icon.classList.remove('fa-spin');
+                    text.innerText = '云未配置';
+                    break;
+                case 'syncing':
+                    btn.className = base + ' bg-amber-500/20 border-amber-500/50 text-amber-400';
+                    icon.className = 'fa-solid fa-cloud-arrow-up fa-spin';
+                    text.innerText = '同步中';
+                    break;
+                case 'synced':
+                    btn.className = base + ' bg-slate-800 hover:bg-slate-700 border-emerald-500/50 text-emerald-400';
+                    icon.className = 'fa-solid fa-cloud-check';
+                    icon.classList.remove('fa-spin');
+                    text.innerText = '已同步';
+                    break;
+                case 'error':
+                    btn.className = base + ' bg-rose-500/15 hover:bg-rose-500/25 border-rose-500/50 text-rose-400';
+                    icon.className = 'fa-solid fa-cloud-exclamation';
+                    icon.classList.remove('fa-spin');
+                    text.innerText = '同步失败';
+                    break;
+                case 'offline':
+                    btn.className = base + ' bg-slate-800 border-slate-700 text-slate-400';
+                    icon.className = 'fa-solid fa-cloud-slash';
+                    icon.classList.remove('fa-spin');
+                    text.innerText = '离线';
+                    break;
+                default:
+                    btn.className = base + ' bg-slate-800 hover:bg-slate-700 border-slate-700 text-cyan-400';
+                    icon.className = 'fa-solid fa-cloud';
+                    icon.classList.remove('fa-spin');
+                    text.innerText = '云同步';
+            }
+        }
+
+        function handleSyncButtonClick() {
+            if (!isCloudConfigured()) {
+                openModal('syncSettingsModal');
+                return;
+            }
+            /* 已配置：长按行为不容易做，直接单击=手动同步，设置入口放在弹窗内 */
+            const modalOpen = !document.getElementById('syncSettingsModal').classList.contains('hidden');
+            if (modalOpen) {
+                closeModal('syncSettingsModal');
+                return;
+            }
+            /* 双击 → 打开设置；单击 → 同步。用时间差简单模拟 */
+            const now = Date.now();
+            if (handleSyncButtonClick._last && now - handleSyncButtonClick._last < 350) {
+                handleSyncButtonClick._last = 0;
+                openModal('syncSettingsModal');
+                return;
+            }
+            handleSyncButtonClick._last = now;
+            setTimeout(function () {
+                if (handleSyncButtonClick._last === 0) return;
+                handleSyncButtonClick._last = 0;
+                syncWithCloud({ manual: true });
+            }, 360);
+        }
+
+        function renderSyncSettingsModal() {
+            const configured = isCloudConfigured();
+
+            const statusBox = document.getElementById('syncConfigStatusBox');
+            if (statusBox) {
+                if (configured) {
+                    statusBox.className = 'rounded-lg p-3 text-xs border bg-emerald-500/10 border-emerald-500/40 text-emerald-300';
+                    statusBox.innerHTML = `
+                        <div class="font-bold flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>云端同步已启用</span>
+                        </div>
+                        <div class="text-[11px] text-emerald-200/80 leading-relaxed">
+                            自动同步：${JSONBIN_CONFIG.AUTO_SYNC ? '开启' : '关闭（仅手动）'} ·
+                            当前状态：${syncStatusLabel(currentSyncStatus)}
+                        </div>
+                    `;
+                } else {
+                    statusBox.className = 'rounded-lg p-3 text-xs border bg-amber-500/10 border-amber-500/40 text-amber-300';
+                    statusBox.innerHTML = `
+                        <div class="font-bold flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>云端同步尚未配置</span>
+                        </div>
+                        <div class="text-[11px] text-amber-200/80 leading-relaxed">
+                            请按下方步骤，把 API Key 与 Bin ID 填入本文件顶部的
+                            <code class="text-amber-300">JSONBIN_CONFIG</code> 中，保存后刷新页面即可启用。
+                        </div>
+                    `;
+                }
+            }
+
+            const detailBox = document.getElementById('syncDetailBox');
+            if (detailBox) {
+                if (!configured) {
+                    detailBox.innerHTML = `<div class="text-slate-500 text-center py-1">配置完成后将在此显示同步详情</div>`;
+                } else {
+                    const localTs = Number(appData && appData.lastModified) || 0;
+                    const synced = Number(syncMeta.lastSyncedAt) || 0;
+                    const pending = localTs > synced;
+                    const shortBin = JSONBIN_CONFIG.BIN_ID.length > 10
+                        ? JSONBIN_CONFIG.BIN_ID.slice(0, 6) + '…' + JSONBIN_CONFIG.BIN_ID.slice(-4)
+                        : JSONBIN_CONFIG.BIN_ID;
+
+                    detailBox.innerHTML = `
+                        <div class="flex justify-between"><span>Bin ID</span><span class="text-slate-200 font-mono">${escapeHtml(shortBin)}</span></div>
+                        <div class="flex justify-between"><span>最近一次同步</span><span class="text-cyan-400">${formatTimestamp(synced)}</span></div>
+                        <div class="flex justify-between"><span>本地数据时间戳</span><span class="text-slate-200">${formatTimestamp(localTs)}</span></div>
+                        <div class="flex justify-between"><span>待上传改动</span><span class="${pending ? 'text-amber-400 font-bold' : 'text-emerald-400'}">${pending ? '有（将在数秒内自动上传）' : '无'}</span></div>
+                    `;
+                }
+            }
+        }
+
+        function syncStatusLabel(s) {
+            const map = {
+                unconfigured: '未配置',
+                idle: '待命',
+                syncing: '同步中…',
+                synced: '已同步',
+                error: '同步失败',
+                offline: '离线'
+            };
+            return map[s] || s;
+        }
+
+        /* =========================================================
+           十二、通用 UI 辅助
+           ========================================================= */
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+
+            if (tabId === 'printTab') {
+                document.getElementById('printTab').classList.remove('hidden');
+                document.querySelector('main').classList.add('hidden');
+            } else {
+                document.getElementById('printTab').classList.add('hidden');
+                document.querySelector('main').classList.remove('hidden');
+                document.getElementById(tabId).classList.remove('hidden');
+            }
+
+            const tabMap = {
+                'dailyTab': 'tab-daily',
+                'highriskTab': 'tab-highrisk',
+                'storeTab': 'tab-store',
+                'penaltyTab': 'tab-penalty',
+                'historyTab': 'tab-history'
+            };
+
+            Object.values(tabMap).forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) btn.className = "px-3 py-2 rounded-t-lg font-medium flex items-center space-x-1.5 whitespace-nowrap text-slate-400 hover:text-slate-200";
+            });
+
+            if (tabMap[tabId]) {
+                const activeBtn = document.getElementById(tabMap[tabId]);
+                if (activeBtn) activeBtn.className = "px-3 py-2 rounded-t-lg font-medium flex items-center space-x-1.5 whitespace-nowrap bg-amber-500/10 text-amber-400 border-b-2 border-amber-500";
+            }
+        }
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+
+                if (id === 'editOperatorModal') {
+                    initAvatarEditModal();
+                } else if (id === 'manageUsersModal') {
+                    renderManageUsersModal();
+                } else if (id === 'leaderboardModal') {
+                    renderLeaderboardModal();
+                } else if (id === 'backupModal') {
+                    renderBackupStats();
+                } else if (id === 'syncSettingsModal') {
+                    renderSyncSettingsModal();
+                }
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function openConfirmDialog(title, msg) {
+            return new Promise((resolve) => {
+                confirmResolver = resolve;
+                document.getElementById('confirmDialogTitle').innerText = title;
+                document.getElementById('confirmDialogMsg').innerText = msg;
+                openModal('confirmDialogModal');
+            });
+        }
+
+        function resolveConfirmDialog(res) {
+            closeModal('confirmDialogModal');
+            if (confirmResolver) {
+                confirmResolver(res);
+                confirmResolver = null;
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-4 right-4 bg-amber-500 text-slate-950 px-4 py-2 rounded-lg font-bold text-xs shadow-lg z-[60] transition transform duration-300 translate-y-0 flex items-center space-x-1.5 border border-amber-300 max-w-[80vw]";
+            toast.innerHTML = `<i class="fa-solid fa-bullhorn flex-shrink-0"></i><span>${escapeHtml(msg)}</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 2400);
+        }
+
+        function showStatusBar(type, msg) {
+            const bar = document.getElementById('statusBar');
+            if (!bar) return;
+            bar.className = type;
+            bar.innerHTML = `<i class="fa-solid ${type === 'offline' ? 'fa-wifi' : 'fa-triangle-exclamation'}"></i><span>${escapeHtml(msg)}</span>`;
+            bar.classList.remove('hidden');
+        }
+
+        function hideStatusBar() {
+            const bar = document.getElementById('statusBar');
+            if (bar) bar.classList.add('hidden');
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        /* =========================================================
+           十三、PWA 安装引导
+           ========================================================= */
+        function setupInstallPrompt() {
+            window.addEventListener('beforeinstallprompt', function (e) {
+                e.preventDefault();
+                deferredInstallPrompt = e;
+                const btn = document.getElementById('installBtn');
+                if (btn) btn.classList.remove('hidden');
+            });
+
+            window.addEventListener('appinstalled', function () {
+                deferredInstallPrompt = null;
+                const btn = document.getElementById('installBtn');
+                if (btn) btn.classList.add('hidden');
+                showToast('已安装到桌面，下次可直接从图标启动');
+            });
+        }
+
+        async function triggerInstall() {
+            if (deferredInstallPrompt) {
+                deferredInstallPrompt.prompt();
+                try {
+                    const result = await deferredInstallPrompt.userChoice;
+                    if (result.outcome === 'accepted') {
+                        showToast('安装成功！可从桌面图标直接启动');
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+                deferredInstallPrompt = null;
+            } else {
+                openModal('installHelpModal');
+            }
+        }
+
+        /* =========================================================
+           十四、网络状态监测
+           ========================================================= */
+        function setupNetworkMonitor() {
+            if (!navigator.onLine) {
+                showStatusBar('offline', '当前离线，页面仍可正常使用。数据会保存在本机，联网后自动同步。');
+                setSyncStatus('offline');
+            }
+
+            window.addEventListener('offline', function () {
+                showStatusBar('offline', '网络已断开，页面仍可正常使用。');
+                if (isCloudConfigured()) setSyncStatus('offline');
+            });
+
+            window.addEventListener('online', function () {
+                hideStatusBar();
+                if (isCloudConfigured()) {
+                    setSyncStatus('idle');
+                    /* 恢复网络后立即尝试同步一次 */
+                    syncWithCloud({ manual: false });
+                }
+            });
+        }
+
+        /* =========================================================
+           十五、Tailwind 加载失败兜底提示
+           ========================================================= */
+        function setupTailwindWatchdog() {
+            setTimeout(function () {
+                if (typeof window.tailwind === 'undefined') {
+                    document.body.classList.add('tw-fallback');
+                    showStatusBar('danger', 'Tailwind 样式库加载失败，页面显示可能异常。请检查网络后刷新，或改用托管方案访问。');
+                }
+            }, 5000);
+        }
+
+        /* =========================================================
+           十六、初始化
+           ========================================================= */
+        function handleMonthlySettlementOnLoad() {
+            const settlement = settleMonthlyCoins();
+
+            if (settlement) {
+                appData.lastModified = Date.now();
+                persistData();
+
+                const burnedTotal = settlement.results.reduce((s, r) => s + r.burned, 0);
+                const changedList = settlement.results.filter(r => r.burned > 0);
+
+                setTimeout(() => {
+                    if (burnedTotal > 0) {
+                        const detail = changedList
+                            .map(r => `${r.name} ${r.before}→${r.after}`)
+                            .join('，');
+                        showToast(`月度清算(${settlement.settledMonth})：${detail}，共回收 ${burnedTotal} 币`);
+                    } else {
+                        showToast(`月度清算完成：已进入 ${settlement.currentMonth} 结算周期`);
+                    }
+                }, 700);
+            }
+        }
+
+        function initApp() {
+            /* 1. 检测存储可用性 */
+            storageAvailable = detectStorageAvailability();
+
+            /* 2. 读取同步元数据 */
+            loadSyncMeta();
+
+            /* 3. 加载数据（localStorage 或内存） */
+            appData = loadAppData();
+
+            /* 4. 页面首次渲染 */
+            try {
+                renderUI();
+            } catch (e) {
+                console.error('首次渲染失败', e);
+            }
+
+            /* 5. 同步状态初始化 */
+            setSyncStatus(isCloudConfigured() ? 'idle' : 'unconfigured');
+
+            /* 6. 月度结算 */
+            handleMonthlySettlementOnLoad();
+
+            /* 7. 网络监测 */
+            setupNetworkMonitor();
+
+            /* 8. PWA 安装引导 */
+            setupInstallPrompt();
+
+            /* 9. Tailwind 加载失败兜底 */
+            setupTailwindWatchdog();
+
+            /* 10. 存储不可用提示 */
+            if (!storageAvailable) {
+                showStatusBar('danger', '当前浏览器禁止本地存储（可能因隐私模式或本地文件限制）。数据仅保存在当前页面内存中，请点击右上角「数据备份」手动导出，避免丢失。');
+            }
+
+            /* 11. 启动后延迟首次云同步（等页面渲染稳定） */
+            if (isCloudConfigured()) {
+                setTimeout(function () {
+                    syncWithCloud({ manual: false });
+                }, 1500);
+            }
+
+            /* 12. 定时后台同步 */
+            if (isCloudConfigured() && JSONBIN_CONFIG.AUTO_SYNC) {
+                const interval = JSONBIN_CONFIG.PERIODIC_SYNC || 5 * 60 * 1000;
+                periodicSyncTimer = setInterval(function () {
+                    if (hasUnsyncedChanges() || navigator.onLine) {
+                        syncWithCloud({ manual: false });
+                    }
+                }, interval);
+            }
+
+            /* 13. 每小时检查跨月 */
+            setInterval(function () {
+                const settlement = settleMonthlyCoins();
+                if (settlement) {
+                    appData.lastModified = Date.now();
+                    persistData();
+                    renderUI();
+                    if (isCloudConfigured() && JSONBIN_CONFIG.AUTO_SYNC) scheduleAutoSync();
+
+                    const burnedTotal = settlement.results.reduce((s, r) => s + r.burned, 0);
+                    if (burnedTotal > 0) {
+                        showToast(`月度清算(${settlement.settledMonth})：剩余积分已减半，共回收 ${burnedTotal} 币`);
+                    }
+                }
+            }, 60 * 60 * 1000);
+
+            /* 14. 页面重新可见 / 隐藏时的处理 */
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    /* 离开页面：若有未同步改动，立刻推送一次 */
+                    if (isCloudConfigured() && navigator.onLine && hasUnsyncedChanges()) {
+                        if (autoSyncTimer) {
+                            clearTimeout(autoSyncTimer);
+                            autoSyncTimer = null;
+                        }
+                        syncWithCloud({ manual: false });
+                    }
+                } else {
+                    /* 回到页面：检查跨月 + 拉取云端更新 */
+                    const settlement = settleMonthlyCoins();
+                    if (settlement) {
+                        appData.lastModified = Date.now();
+                        persistData();
+                        renderUI();
+                        if (isCloudConfigured() && JSONBIN_CONFIG.AUTO_SYNC) scheduleAutoSync();
+                    }
+                    if (isCloudConfigured() && navigator.onLine) {
+                        syncWithCloud({ manual: false });
+                    }
+                }
+            });
+
+            /* 15. 页面卸载前确保数据落盘 */
+            window.addEventListener('beforeunload', function () {
+                try {
+                    persistData();
+                } catch (e) { /* 忽略 */ }
+            });
+        }
+
+        window.addEventListener('load', initApp);
+
+        /* 如果 load 事件已经触发（例如脚本延迟加载），立即执行 */
+        if (document.readyState === 'complete') {
+            initApp();
+        }
+    </script>
+</body>
+</html>
